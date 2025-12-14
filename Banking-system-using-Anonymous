@@ -1,0 +1,32 @@
+import java.util.*;
+interface Bank
+{
+    void deposite();
+    void withdraw();
+}
+class Anonymous1{
+
+public static void main(String[] args)
+{
+    Bank b=new Bank() {
+            public void deposite()
+            {
+                System.out.println("Deposting Amount:5000");
+                Scanner sc=new Scanner(System.in);
+                System.out.println("Enter the Amount to be deposited:");
+                int amt=sc.nextInt();
+                System.out.println("Amount Deposited:"+amt);
+            }
+            public void withdraw()
+            {
+                System.out.println("Withdrawing Amount:5600");
+                Scanner sc=new Scanner(System.in);
+                System.out.println("Enter the Amount to be deposited:");
+                int amt=sc.nextInt();
+                System.out.println("Amount Withdrawed:"+amt);
+            }
+        };
+    b.deposite();
+    b.withdraw();
+}
+}
